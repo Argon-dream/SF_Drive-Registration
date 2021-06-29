@@ -1,0 +1,63 @@
+@import "./../CommonParts/variables";
+@import "./../CommonParts/mixins";
+@import "./../CommonParts/normalize";
+@import "./../CommonParts/generic";
+
+/* Frames for MainPage.html */
+/* cars_russia */
+.cars_russia {
+
+  padding-top: 0;
+
+  &-img {
+
+    display: block;
+
+    @include breakpoint(large) {
+      display: flex;
+    }
+
+    img {
+      position: relative;
+      align-self: flex-start;
+      width: 395px;
+      height: 283px;
+      top: -70px;
+
+      @include breakpoint(large) {
+        width: 1134px;
+        height: 812px;
+        top: -130px;
+      }
+    }
+
+    &-box {
+      max-width: 90%;
+      margin: 0 auto;
+      @include TextL($lightblack);
+
+      @include breakpoint(large) {
+        position: absolute;
+      }
+
+      p{
+        margin-bottom: 25px;
+        @include breakpoint(large) {
+          margin-bottom: 50px;
+        }
+      }
+
+      &-button {
+        border: 1px solid $button;
+        border-radius: 6px;
+        background-color: $button;
+        font-size: 16px;
+        line-height: 19px;
+        color: $white;
+        padding: 16px 40px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+    }
+  }
+}

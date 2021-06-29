@@ -1,0 +1,77 @@
+@import "./../CommonParts/variables";
+@import "./../CommonParts/mixins";
+@import "./../CommonParts/normalize";
+@import "./../CommonParts/generic";
+
+.top__frame {
+    position: relative;
+}
+
+.phase__frame {
+    display: grid;
+    margin: 70px 20px 0 20px;
+
+    @include breakpoint(large) {
+        margin-top: 90px;
+    }
+
+    &-phase {
+        text-align: center;
+        color: $teamgrey;
+    }
+
+    &-main__header{
+         text-align: center;
+         color: $lightblack;
+         margin-top: 10px;
+
+         @include breakpoint(large) {
+             margin-top: 15px;
+         }
+     }
+
+    &-fields{
+        margin: 30px 20px;
+
+        @include breakpoint(large) {
+            margin: 20px 20px 90px 20px;
+        }
+
+        #birth, #phone, #passport, #passportdate, #passportcode, #license, #licenseDate {
+
+            @include breakpoint(large) {
+                width: 155px;
+            }
+            @include breakpoint(small) {
+                width: auto;
+            }
+        }
+    }
+}
+
+.bottom__section{
+    border-top: 1px solid $teamgrey;
+    text-align: center;
+
+    &-send__form{
+        width: 335px;
+        height: 51px;
+        border-radius: 6px;
+        background: $button;
+        border: none;
+        margin: 16px 0;
+        text-align: center;
+        color: $white;
+        outline: none;
+
+        @include breakpoint(large) {
+            width: 176px;
+            padding: 16px 40px;
+        }
+
+        &.isDisabled{
+            color: $onegrey;
+            background: $backgrey;
+        }
+    }
+}
