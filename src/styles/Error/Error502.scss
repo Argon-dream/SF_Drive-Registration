@@ -1,0 +1,32 @@
+@import "./../CommonParts/variables";
+@import "./../CommonParts/mixins";
+@import "./../CommonParts/normalize";
+@import "./../CommonParts/generic";
+
+/* Frames for Error.html */
+
+.error502 {
+
+  display: grid;
+
+  &-img {
+    display: flex;
+    justify-content: center;
+
+    img {
+      height: 167px;
+      width: 325px;
+
+      @include breakpoint(large) {
+        height: 300px;
+        width: 582px;
+      }
+    }
+  }
+
+  &-text {
+    max-width: 90%;
+    margin: 0 auto;
+    @include TextL($lightblack);
+  }
+}

@@ -1,0 +1,113 @@
+@import "./../CommonParts/variables";
+@import "./../CommonParts/mixins";
+@import "./../CommonParts/normalize";
+@import "./../CommonParts/generic";
+
+/* Frames for MainPage.html */
+/* about_carSharing */
+
+.about_carSharing {
+
+  &-rent {
+
+    display: block;
+    margin: 0 20px 60px 20px;
+
+    @include breakpoint(large) {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 160px;
+    }
+
+    img {
+      width: 240px;
+      height: 164px;
+
+      @include breakpoint(large) {
+        width: 502px;
+        height: 343px;
+        margin-right: 80px;
+      }
+    }
+
+    &-box {
+      max-width: 90%;
+      margin: 0 auto;
+      @include TextS($lightblack);
+
+      @include breakpoint(large) {
+        @include TextM($lightblack);
+        text-align: left;
+      }
+    }
+  }
+
+  &-auto {
+
+    display: block;
+    margin: 0 20px 60px 20px;
+
+    @include breakpoint(large) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      margin-bottom: 120px;
+    }
+
+    img {
+      width: 246px;
+      height: 131px;
+
+      @include breakpoint(large) {
+        width: 502px;
+        height: 267px;
+        margin-left: 80px;
+      }
+    }
+
+    &-box {
+      max-width: 90%;
+      margin: 0 auto;
+      @include TextS($lightblack);
+
+      @include breakpoint(large) {
+        @include TextM($lightblack);
+        text-align: left;
+      }
+    }
+  }
+
+  &-guarantee {
+
+    display: block;
+    margin: 0 20px 60px 20px;
+
+    @include breakpoint(large) {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 120px;
+    }
+
+    img {
+      width: 242px;
+      height: 125px;
+
+      @include breakpoint(large) {
+        width: 500px;
+        height: 257px;
+        margin-right: 80px;
+      }
+    }
+
+    &-box {
+      max-width: 90%;
+      margin: 0 auto;
+      @include TextS($lightblack);
+
+      @include breakpoint(large) {
+        @include TextM($lightblack);
+        text-align: left;
+      }
+    }
+  }
+}

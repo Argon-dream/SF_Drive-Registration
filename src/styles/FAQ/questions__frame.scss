@@ -1,0 +1,53 @@
+@import "./../CommonParts/variables";
+@import "./../CommonParts/mixins";
+@import "./../CommonParts/normalize";
+
+/* Frames for FAQ.html */
+/* questions__frame */
+.questions__frame {
+  display: block;
+  justify-content: center;
+
+  &.collapsible {
+    background-color: $lightgrey;
+    border-radius: 6px;
+    color: $lightblack;
+    cursor: pointer;
+    padding: 19px 20px 18px 22px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    @include TextM($lightblack);
+
+    &:hover {
+      background-color: $collaphover;
+    }
+
+    &:after {
+      content: '\2228';
+      color: #A0A7AD;
+      float: right;
+      margin-right: 5px;
+    }
+  }
+
+  .active {
+    background-color: $collapopen;
+    color: $button;
+    &:after {
+      content: '\2227';
+      margin-right: 5px;
+      color: #A0A7AD;
+    }
+  }
+
+  &.content {
+    padding-left: 22px;
+    text-align: left;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    @include TextM($lightblack);
+  }
+}

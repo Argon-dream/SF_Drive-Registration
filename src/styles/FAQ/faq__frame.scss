@@ -1,0 +1,30 @@
+@import "./../CommonParts/variables";
+@import "./../CommonParts/mixins";
+@import "./../CommonParts/normalize";
+
+/* Frames for FAQ.html */
+/* faq__frame */
+.faq__frame {
+
+  &-img {
+    display: flex;
+    justify-content: center;
+    margin: 0 54px 40px 54px;
+
+    img {
+      height: 202px;
+      width: 242px;
+
+      @include breakpoint(large) {
+        height: 300px;
+        width: 360px;
+      }
+    }
+  }
+
+  &-text {
+    max-width: 90%;
+    margin: 0 auto;
+    @include TextL($lightblack);
+  }
+}

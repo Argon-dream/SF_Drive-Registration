@@ -1,0 +1,36 @@
+@import "./../CommonParts/variables";
+@import "./../CommonParts/mixins";
+@import "./../CommonParts/normalize";
+@import "./../CommonParts/generic";
+
+.InfoHeader{
+    color: $lightblack;
+    margin-bottom: 30px;
+}
+
+.fields{
+    margin-top: 30px;
+
+    .field{
+        margin-bottom: 26px;
+    }
+}
+
+@include breakpoint(small) {
+    .InfoHeader{
+        font-size: 36px;
+        line-height: 147.3%;
+    }
+
+    .inputs{
+        .field{
+            display: block;
+            margin-bottom: 20px;
+        }
+    }
+
+    #birth, #phone, #passport, #passportdate, #passportcode, #licence, #licencedate{
+        width: 155px;
+    }
+    
+}
